@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+
+    // // alert("This is Glory website")
+// var courses = ["youruba","english","agric","Biology","social science"];
+
+
+// function checkresult(){
+//     document.getElementById("coursename").textContent =courses[0];
+//     document.getElementById("courecode").textContent =courses[1];
+//     document.getElementById("course1").textContent =courses[2];
+//     document.getElementById("couregrade").textContent =courses[3];
+//     document.getElementById("course2").textContent =courses[4];
+//     document.getElementById("course1b").textContent =courses[5];
+//     document.getElementById("table").style.display ="block";
+//     document.getElementById("btn").style.opacity =0;
+// }
+
+
+
+function cummulativeresult(){
+
+
+var result =["Course",
+    "Score",
+    "Grade",
+    "5.00"
+
+]
+var grade = [
+    "CPT 512", "90","A", "CPT 522","80", "A","CPT 523", "70","A", "CPT 521","90", "A","CPT 511", "95","A", "CPT 512","80", "A","CPT 515", "75","A", "A","A", "A"
+]
+var firstStudent = {
+    matricNo:"2018/1/00008CS",
+    password : "123456",
+    level:"500",
+    semester: "1"
+}
+var get_user = document.getElementById("text").value;
+var get_userPassword = document.getElementById("password").value;
+var getoutput = document.getElementById("checkvalidate");
+var getoutput2 = document.getElementById("checkvalidate2")
+var getoutput3 = document.getElementById("checkvalidate3")
+var getoutput4 = document.getElementById("checkvalidate4")
+var selectsemster = document.getElementById("sm").value;
+// alert(selectsemster);
+
+if(get_user!=firstStudent.matricNo || get_userPassword!=firstStudent.password ){
+getoutput.textContent =("Please Enter a Valid matric Number");
+getoutput.style.display="block";
+getoutput.style.color ="red";
+// another display 
+getoutput2.textContent =("Please Enter a Valid & correct password");
+getoutput2.style.display="block";
+getoutput2.style.color ="red";
+// 
+getoutput3.textContent =("Please select your level");
+getoutput3.style.dxisplay="block";
+getoutput3.style.color ="red";
+// 
+getoutput4.textContent =("Please select semster");
+getoutput4.style.display="block";
+getoutput4.style.color ="red";
+}
+    else{
+// selcting the course from the page to upload each of them 
+// course
+var selectposition1 =document.getElementById('h1');
+var selectposition2 = document.getElementById('h2');
+var selectposition3 = document.getElementById('h3');
+var selectcgpa = document.getElementById("cgpa");
+
+selectposition1.textContent = result[0];
+selectposition2.textContent = result[1];
+selectposition3.textContent = result[2];
+document.getElementById("table").style.display ="block";
+
+// selecting Each tr and td (line 1)
+var selectposition1a =document.getElementById('td1of1');
+var selectposition2a = document.getElementById('td1of2');
+var selectposition3a = document.getElementById('td1of3');
+selectposition1a.textContent = (grade[0]);
+selectposition2a.textContent =(grade[1]);
+selectposition3a.textContent =(grade[2]);
+
+// the third line (lin)
+var third = document.getElementById("td3a");
+var third2 = document.getElementById("td3b");
+var third3 = document.getElementById("td3c");
+third.textContent =(grade[3])
+third2.textContent =(grade[4])
+third3.textContent =(grade[5])
+// the fourth libe
+var fourth = document.getElementById("f1");
+var fourtb = document.getElementById("f2");
+var fourtc =document.getElementById("f3");
+fourth.textContent =(grade[6])
+fourtb.textContent = (grade[7])
+fourtc.textContent =(grade[8])
+// 5th line
+var fifth = document.getElementById("ft1");
+var fifth2 = document.getElementById("ft2");
+var fifth3 = document.getElementById("ft3");
+fifth.textContent =(grade[9])
+fifth2.textContent =(grade[10])
+fifth3.textContent =(grade[11])
+// 6th
+var sith1 = document.getElementById("sit1");
+var sith2 =document.getElementById("sit2");
+var sith3 = document.getElementById("sit3");
+sith1.textContent  =(grade[12])
+sith2.textContent =(grade[13])
+sith3.textContent  =(grade[14])
+// last page
+var seven1 =document.getElementById("sv1");
+var seven2 =document.getElementById("sv2");
+var seven3 = document.getElementById("sv3");
+seven1.textContent =(grade[15])
+seven2.textContent =(grade[16])
+seven3.textContent  =(grade[17])
+document.getElementById("centerbale").style.display ="flex";
+document.getElementById("flexlogin").style.display ="none";
+document.body.style.backgroundImage = `url(${"whitebg.jpg"})`;
+document.body.style.backgroundSize = 'cover'; // Ensures the image covers the entire background
+document.body.style.backgroundPosition = 'center'; // Centers the image
+selectcgpa.textContent =result[3]
+
+
+
+    }
+
+  
+}
+
+function showtheoutcome(){
+
+    var space = document.getElementById("space");
+    space.style.display= "block";
+    space.style.opacity ="999";
+    style.zIndex = 1;
+    document.getElementById("overallcontainer").style.zIndex = "0.5";
+    
+}
+
+function closepage(){
+    var close = document.getElementById("space");
+    close.style.display ="none";
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+    <style>
+        body{
+            background-image: url("logingbg.jpg");
+            background-position:center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="icon" href="" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web result Checker</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+
+  
+
+  
+
+
+
+    <!--The nave bar gor the home page-->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">School Portal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Admission</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">News & Event</a></li>
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Register/Apply</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success" type="submit"><a href="login.html" class="loginitselflink">Login</a> </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- the result table
+-->
+    <div id="centerbale">
+    <div id="table-container">
+        <table id="table">
+            <caption>Your CGPA is <span> <h2 id="cgpa"></h2></span>
+                <li class="listbtn"><button type="button" class="btn btn-success"> <a href="login.html" class="dg">Dismiss</a></button></li>
+                <li class="listbtn"><button type="button" class="btn btn-success"><a href="index.html" class="dg">Go Back Home </a> </button></li>
+            
+            
+            </caption>
+            <thead>
+                <tr>
+                    <th id="h1"></th>
+                    <th id="h2"></th>
+                    <th id="h3"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="td1of1"></td>
+                    <td id="td1of2"></td>
+                    <td id="td1of3"></td>
+                </tr>
+                <tr>
+                    <td id="td2a"></td>
+                    <td id="td2b"></td>
+                    <td id="td2b"></td>
+                </tr>
+                <tr>
+                    <td id="td3a"></td>
+                    <td id="td3b"></td>
+                    <td id="td3c"></td>
+                </tr>
+                <tr>
+                    <td id="f1"></td>
+                    <td id="f2"></td>
+                    <td id="f3"></td>
+                </tr>
+                <tr>
+                    <td id="ft1"></td>
+                    <td id="ft2"></td>
+                    <td id="ft3"></td>
+                </tr>
+                <tr>
+                    <td  id="sit1"></td>
+                    <td id="sit2"></td>
+                    <td id="sit3"></td>
+                </tr>
+                <tr>
+                    <td  id="sv1"></td>
+                    <td id="sv2"></td>
+                    <td id="sv3"></td>
+                </tr>
+                <tr>
+                    <td  id="sv1"></td>
+                    <td id="sv2"></td>
+                    <td id="sv3"></td>
+                </tr>
+                
+            </tbody>
+           
+        </table>
+    </div>
+
+  
+</div>
+    <!-- the place where the second section started  -->
+     <div class="flexlogin" id="flexlogin">
+     <div class="grid">
+        <div class="grid1">
+            <h1 class="headingsection"> Welcome</h1>
+            <p class="headingtext">Welcome back to school it is time to check the result as the school has released the second semester examination result for the bath 2024 
+                Kindly fill in your information and check your result
+                Thanks
+                </p>
+
+        </div>
+        <div class="grid2">
+            <div>
+            <h2 class="welcome">Welcome To Campus</h2>
+        </div>
+        <div>
+       
+            <input type="text" name="text" id="text" placeholder="Enter Your Matric No" class="input">
+           <p> <i id="checkvalidate"></i></p>
+        </div>
+        <div>
+           
+            <input type="password" name="password" id="password" placeholder="Enter Your password" class="input">
+            <p> <i id="checkvalidate2"></i></p>
+          
+        </div>
+        <div>
+            <select name="Level" id="level">
+                <option value="">Select Level</option>
+                <option value="100level">100 Level</option>
+                <option value="200level">200 Level</option>
+                <option value="300level">300 Level</option>
+                <option value="400level">400 Level</option>
+                <option value="500level">500 Level</option>
+                <option value="600level">600 Level</option>
+            </select>
+            <p> <i id="checkvalidate3"></i></p>
+            <!-- <input type="number" name="number" id="number" placeholder="Level" class="input"> -->
+        </div>
+        <div>
+            <select name="semster" id="semester">
+                <option value="" id="sm">Select Semester</option>
+                <option value="100level" id="sm">Second Semester</option>
+                <option value="200level" id="sm">First Semester</option>
+              
+            </select>
+            <p> <i id="checkvalidate4"></i></p>
+          
+            <!-- <input type="number" name="number2" id="number2" placeholder="Semester" class="input"> -->
+        </div>
+      
+            <div>
+            <span><input type="checkbox">Remanber Me</span>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" onclick="cummulativeresult()">Check Result</button>
+        </div>
+
+        </div>
+     </div>
+    </div>
+
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
